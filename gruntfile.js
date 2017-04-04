@@ -26,5 +26,5 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', [ 'copy' ]);
+  grunt.registerTask('default', [ 'copy' ]);
 };
