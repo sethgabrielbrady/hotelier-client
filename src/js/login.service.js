@@ -1,7 +1,7 @@
 (function() {
  'use strict';
 
- angular.module('inventory').factory('UserService', UserService);
+ angular.module('hotel').factory('UserService', UserService);
 
  /**
  * Creates the service model for usernames

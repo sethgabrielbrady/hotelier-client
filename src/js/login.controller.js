@@ -1,11 +1,10 @@
 (function() {
  'use strict';
 
- angular.module('inventory')
+ angular.module('hotel')
    .controller('LoginController', LoginController);
 
  LoginController.$inject = ['UserService'];
-
 
  /**
   * Creates a log in controller so application can have miltiple users
