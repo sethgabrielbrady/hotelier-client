@@ -6,8 +6,8 @@ Site URL: <https://panda-hotelier.herokuapp.com/>
 
 ## To Get Started...
 
-First, clone this repo and install the dependencies with `npm install`. Then run the 
-`grunt` command in the project root (this will use the "default" task alias in the 
+First, clone this repo and install the dependencies with `npm install`. Then run the
+`grunt` command in the project root (this will use the "default" task alias in the
 grunt configuration). Now, run your http server from the `build/` directory.
 
 ## Application Deployment
@@ -17,10 +17,16 @@ branch (this is called "continuous integration / deployment"). Before deploying 
 `grunt` command, because of this, **ALL dependencies** must be installed as regular app
 `"dependencies"` in the `package.json`. This app **does not use `"devDependencies"`**.
 
-> NOTE: Because `grunt` is run _when deploying the application on Heroku_, if the 
+> NOTE: Because `grunt` is run _when deploying the application on Heroku_, if the
 build fails, the site will NOT be visible! Ensure the entire `grunt` build runs successfully
 before merging into `master`.
 
 ## API Information
 
 The base URL for the data API is `https://panda-hotelier-api.herokuapp.com/api/`
+
+Git Command Review to make new branch:
+```
+git branch html2
+git checkout html2
+```
