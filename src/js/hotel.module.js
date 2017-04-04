@@ -1,8 +1,30 @@
 (function() {
   'use strict';
 
-  angular.module('hotel', []);
+  angular.module('hotel', ['ui.router'])
+      .config(routerConfig);
 
-    console.log('Inside the module');
+      routerConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+      function routerConfig ($stateProvider, $urlRouterProvider){
+
+
+
+        $stateProvider
+        .state({
+            name: 'home',
+            url: '/home',
+            templateUrl: 'views/home.template.html',
+          })
+          .state({
+              name: 'login',
+              url: '/login',
+              templateUrl: 'views/login.template.html',
+              controller: 'LoginController',
+              controllerAs: 'loginCtrl'
+          });
+
+
+      }
+
 
 }());
