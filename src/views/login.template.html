@@ -1,0 +1,16 @@
+<article ng-controller='LoginController as loginCtrl' class='page-header'>
+     <h1>Staff Login<h1>
+
+       <form class='form-group form-inline' name='loginform'
+       ng-submit='loginform.$valid && logCtrl.addUser(logCtrl.newUser)'>
+
+       <input ng-model='loginCtrl.newUser.username' class='form-control' type='text'
+       name='username' placeholder='Username'>
+
+       <input ng-model='loginCtrl.newUser.password' class='form-control' type='text'
+       name='password' placeholder='Password'>
+
+       <input type='submit' class='form-control btn btn-primary loginForm' value='login'
+       ng-click='loginCtrl.removeUser(users)'>
+       </form>
+</article>
