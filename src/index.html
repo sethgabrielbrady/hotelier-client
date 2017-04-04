@@ -14,20 +14,20 @@
     <body>
       <header>
         <h1>Hotelier</h1>
-
+        <aside ui-view></aside>
         <h2>Easier reservations for tomorrow, today.</h2>
       </header>
         <main>
         <nav>
           <ul>
-            <li>home</li>
+            <li><a ui-sref='home'>home</a></li>
             <li>about our hotel</li>
             <li>all guests</li>
             <li>create guest</li>
             <li>create reservation</li>
             <li>reservations</li>
             <li>log out</li>
-            <li>login</li>
+            <li><a ui-sref='login'>login</a></li>
           </ul>
         </nav>
         <h1>About Our Hotel</h1>
@@ -52,8 +52,8 @@
         <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
         <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
         <script src='/js/hotel.module.js'></script>
-        <script src='/js/reservation.controller.js'></script>
-        <script src='/js/reservation.service.js'></script>
+        <!-- <script src='/js/reservation.controller.js'></script>
+        <script src='/js/reservation.service.js'></script> -->
       </body>
 
 </html>

@@ -9,18 +9,18 @@
 
 
 
-
-
         $stateProvider
         .state({
             name: 'home',
-            url: '/',
+            url: '/home',
             templateUrl: 'views/home.template.html',
           })
           .state({
               name: 'login',
               url: '/login',
               templateUrl: 'views/login.template.html',
+              controller: 'LoginController',
+              controllerAs: 'loginCtrl'
           });
 
 
