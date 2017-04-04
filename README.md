@@ -29,4 +29,5 @@ Git Command Review to make new branch:
 ```
 git branch html2
 git checkout html2
+git push -u origin html2
 ```
