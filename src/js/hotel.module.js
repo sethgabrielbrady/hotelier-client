@@ -11,7 +11,6 @@
 
         $urlRouterProvider.otherwise('/not-found');
 
-
         $stateProvider
         .state({
             name: 'home',
