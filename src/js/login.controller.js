@@ -28,3 +28,4 @@
      UserService.removeUser(user);
    };
  }
+}
