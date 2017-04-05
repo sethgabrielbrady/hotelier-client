@@ -4,11 +4,13 @@
        <form class='form-group form-inline' name='loginform'
        ng-submit='loginform.$valid && logCtrl.addUser(logCtrl.newUser)'>
 
+       <label for ='username'>Username</label>
        <input ng-model='loginCtrl.newUser.username' class='form-control' type='text'
-       name='username' placeholder='Username'>
+       name='username' id='username' placeholder='Username'>
 
+       <label for='password'>Password</label>
        <input ng-model='loginCtrl.newUser.password' class='form-control' type='text'
-       name='password' placeholder='Password'>
+       name='password' id='password' placeholder='Password'>
 
        <input type='submit' class='form-control btn btn-primary loginForm' value='login'
        ng-click='loginCtrl.removeUser(users)'>
