@@ -7,10 +7,9 @@
       routerConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
       function routerConfig ($stateProvider, $urlRouterProvider){
 
-        $urlRouterProvider.when('', '/');
+        $urlRouterCProvider.when('', '/');
 
         $urlRouterProvider.otherwise('/not-found');
-
 
         $stateProvider
         .state({
@@ -55,7 +54,6 @@
             url: '/not-found',
             templateUrl: 'views/not-found.template.html'
           });
-
       }
 
 
