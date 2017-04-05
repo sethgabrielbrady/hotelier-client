@@ -11,7 +11,6 @@
 
         $urlRouterProvider.otherwise('/not-found');
 
-
         $stateProvider
         .state({
             name: 'home',
@@ -54,8 +53,17 @@
             name: 'not-found',
             url: '/not-found',
             templateUrl: 'views/not-found.template.html'
+          })
+          .state({
+            name: 'reservations',
+            url: '/reservations',
+            templateUrl: 'views/reservations.template.html'
+          })
+          .state({
+            name: 'upcoming-reservations',
+            url: '/upcoming-reservations',
+            templateUrl: '/views/upcoming-reservations.template.html'
           });
-
       }
 
 
