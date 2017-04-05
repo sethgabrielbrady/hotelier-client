@@ -5,7 +5,7 @@
        <p ng-show='loginform.password.$touched && !loginform.password.$valid' class='alert alert-warning'>Please enter a valid password.</p>
 
        <form class='form-group form-inline' name='loginform'
-       ng-submit='loginform.$valid && logCtrl.addUser(logCtrl.newUser)'>
+       ng-submit='loginform.$valid && loginCtrl.addUser(loginCtrl.newUser)'>
 
 
        <label for='username'>Email</label>
@@ -20,4 +20,6 @@
        <input type='submit' class='form-control btn btn-primary loginForm' value='login'
        ng-click='loginCtrl.removeUser(users)'>
        </form>
+
+       <p ngIf={{loginCtrl.message}}>{{loginCtrl.message}}</p>
 </article>
