@@ -9,7 +9,11 @@
  */
  function UserService($http) {
    let users = JSON.parse(localStorage.getItem('users')) || [];
+   let token = JSON.parse(localStorage.getItem('token')) || [];
 
+  function getToken() {
+    return token;
+  }
    /**
    * Gathers all of the users information
    * @return {Array} Array containing details of user
@@ -45,7 +49,6 @@
             localStorage.setItem('token', angular.toJson(response.data.id));
             return 'success';
           });
-
    }
 
    /**
@@ -64,7 +67,8 @@
      getUsername: getUsername,
      addUser: addUser,
      removeUser: removeUser,
-     logoutUser: logoutUser
+     logoutUser: logoutUser,
+     getToken: getToken
    };
  }
 }());
