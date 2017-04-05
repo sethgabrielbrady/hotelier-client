@@ -44,11 +44,6 @@
             url: '/create-reservation',
             templateUrl: 'views/create-reservation.template.html'
           })
-          .state({
-            name: 'reservations',
-            url: '/reservations',
-            templateUrl: 'views/reservations.template.html'
-          })
           .state ({
             name: 'not-found',
             url: '/not-found',
@@ -64,7 +59,6 @@
             url: '/upcoming-reservations',
             templateUrl: '/views/upcoming-reservations.template.html'
           });
-
       }
 
 

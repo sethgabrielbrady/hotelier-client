@@ -2,11 +2,12 @@
  'use strict';
 
  angular.module('hotel').factory('UserService', UserService);
+ UserService.$inject= ['$http'];
 
  /**
  * Creates the service model for usernames
  */
- function UserService() {
+ function UserService($http) {
    let users = JSON.parse(localStorage.getItem('users')) || [];
 
    /**
@@ -32,7 +33,19 @@
        username: user.username,
        password: user.password,
      });
-     localStorage.setItem('users', angular.toJson(users));
+     return $http({
+       url: 'https://panda-hotelier-api.herokuapp.com/api/Staffs/login',
+       method: 'post',
+       data: {'email': user.username, 'password': user.password}
+
+     })
+          .then(function handleResponse(response){
+            console.log(response.status);
+            console.log(response.data);
+            localStorage.setItem('token', angular.toJson(response.data.id));
+            return 'success';
+          });
+
    }
 
    /**
@@ -44,11 +57,14 @@
      let index = users.indexOf(user);
      users.splice(index, 1);
    }
-
+   function logoutUser(){
+   localStorage.removeItem('token');
+   }
    return {
      getUsername: getUsername,
      addUser: addUser,
-     removeUser: removeUser
+     removeUser: removeUser,
+     logoutUser: logoutUser
    };
  }
 }());
