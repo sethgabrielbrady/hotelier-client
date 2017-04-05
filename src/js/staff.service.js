@@ -6,7 +6,7 @@
 
   StaffService.$inject = ['$http'];
 
-  function StaffService($http) {
+  function StaffService($http, LoginService) {
 
   /**
    * Add guest to
