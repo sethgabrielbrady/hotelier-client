@@ -1,14 +1,19 @@
 <article ng-controller='LoginController as loginCtrl' class='page-header'>
      <h1>Staff Login<h1>
 
+       <p ng-show='loginform.email.$touched && !loginform.email.$valid' class='alert alert-warning'>Please enter a valid email.</p>
+       <p ng-show='loginform.password.$touched && !loginform.password.$valid' class='alert alert-warning'>Please enter a valid password.</p>
+
        <form class='form-group form-inline' name='loginform'
        ng-submit='loginform.$valid && logCtrl.addUser(logCtrl.newUser)'>
 
-       <input ng-model='loginCtrl.newUser.username' class='form-control' type='text'
-       name='username' placeholder='Username'>
+       <label for ='email'>E-Mail</label>
+       <input ng-model='loginCtrl.newUser.email' class='form-control' type='email'
+       name='email' id='email' placeholder='E-mail'>
 
+       <label for='password'>Password</label>
        <input ng-model='loginCtrl.newUser.password' class='form-control' type='text'
-       name='password' placeholder='Password'>
+       name='password' id='password' placeholder='Password'>
 
        <input type='submit' class='form-control btn btn-primary loginForm' value='login'
        ng-click='loginCtrl.removeUser(users)'>
