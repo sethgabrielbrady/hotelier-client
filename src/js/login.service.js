@@ -45,7 +45,6 @@
             localStorage.setItem('token', angular.toJson(response.data.id));
             return 'success';
           });
-
    }
 
    /**
