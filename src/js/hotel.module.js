@@ -64,7 +64,6 @@
             url: '/upcoming-reservations',
             templateUrl: '/views/upcoming-reservations.template.html'
           });
-
       }
 
 
