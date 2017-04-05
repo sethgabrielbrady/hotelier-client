@@ -9,7 +9,7 @@
     <meta name='author' content='Panda'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link href='style.css' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -33,12 +33,16 @@
     </header>
     <main ui-view></main>
 
-    <footer></footer>
+    <footer>
+      <p>&copy 2016 The Iron Yard Students
+        <small class='glyphicon glyphicon-envelope'></small>
+      </p>
+    </footer>
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
     <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
     <script src='/js/hotel.module.js'></script>
-    <!-- <script src='/js/reservation.controller.js'></script>
-    <script src='/js/reservation.service.js'></script> -->
+    <script src='/js/reservation.controller.js'></script>
+    <script src='/js/reservation.service.js'></script>
     <script src='/js/login.controller.js'></script>
     <script src='/js/login.service.js'></script>
 

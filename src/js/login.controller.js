@@ -27,5 +27,4 @@
    vm.removeUser = function removeUser(user) {
      UserService.removeUser(user);
    };
-
  }
