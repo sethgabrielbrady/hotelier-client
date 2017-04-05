@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <title>Hotelier</title>
+<html lang='en' ng-app='hotel'>
 
-        <meta name='description' content=''>
-        <meta name='author' content=''>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+<head>
+    <meta charset='utf-8'>
+    <title>Hotelier</title>
 
+<<<<<<< HEAD
     </head>
     <body>
         <h1>Hotelierrr</h1>
     </body>
+=======
+    <meta name='description' content=''>
+    <meta name='author' content='Panda'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <header>
+        <h1>Hotelier</h1>
+        <h2>Easier reservations for tomorrow, today.</h2>
+        <nav>
+            <ul>
+                <li><a ui-sref='home'>home</a></li>
+                <li><a ui-sref='about-us'>about our hotel</a></li>
+                <li><a ui-sref='all-guests'>all guests</a></li>
+                <li><a ui-sref='create-guest'>create guest</a></li>
+                <li><a ui-sref='create-reservation'>create reservation</a></li>
+                <li><a ui-sref='reservations'>reservations</a></li>
+                <li ng-controller='LoginController as Login'><a ng-click='Login.logoutUser()' ui-sref='login'>logout></a></li>
+                <li><a ui-sref='login'>login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main ui-view></main>
+
+    <footer>
+      <p>&copy 2016 The Iron Yard Students
+        <small class='glyphicon glyphicon-envelope'></small>
+      </p>
+    </footer>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
+    <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='/js/hotel.module.js'></script>
+    <!-- <script src='/js/reservation.controller.js'></script>
+    <script src='/js/reservation.service.js'></script> -->
+    <script src='/js/login.controller.js'></script>
+    <script src='/js/login.service.js'></script>
+
+</body>
+
+>>>>>>> 968807f991a4a8335c65713ceb9e0f3da086dece
 </html>
