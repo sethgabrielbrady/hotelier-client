@@ -1,59 +1,51 @@
 <!DOCTYPE html>
 <html lang='en' ng-app='hotel'>
-    <head>
-        <meta charset='utf-8'>
-        <title>Hotelier</title>
 
-        <meta name='description' content=''>
-        <meta name='author' content='Panda'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-        <link href='style.css' rel='stylesheet'>
+<head>
+    <meta charset='utf-8'>
+    <title>Hotelier</title>
 
-    </head>
-    <body>
-      <header>
+    <meta name='description' content=''>
+    <meta name='author' content='Panda'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <header>
         <h1>Hotelier</h1>
-
         <h2>Easier reservations for tomorrow, today.</h2>
-      </header>
-        <main>
-
         <nav>
-          <ul>
-            <li>home</li>
-            <li>about our hotel</li>
-            <li>all guests</li>
-            <li>create guest</li>
-            <li>create reservation</li>
-            <li>reservations</li>
-            <li>log out</li>
-            <li>login</li>
-          </ul>
+            <ul>
+                <li><a ui-sref='home'>home</a></li>
+                <li><a ui-sref='about-us'>about our hotel</a></li>
+                <li><a ui-sref='all-guests'>all guests</a></li>
+                <li><a ui-sref='create-guest'>create guest</a></li>
+                <li><a ui-sref='create-reservation'>create reservation</a></li>
+                <li><a ui-sref='reservations'>reservations</a></li>
+                <li>log out</li>
+                <li><a ui-sref='login'>login</a></li>
+            </ul>
         </nav>
 
-        <h1>About Our Hotel</h1>
-          <img src='images/door-windows.jpg' alt='An image of a door and window'>
-          <p>Jean shorts aesthetic iPhone hammock actually, bespoke unicorn jianbing plaid poutine gochujang flannel subway tile fap.
-            Cold-pressed portland man braid semiotics blue bottle, meditation listicle art party bitters actually 90's la croix.
-            Keffiyeh truffaut squid, bespoke pinterest jean shorts bitters succulents PBR&B migas listicle. Gentrify marfa lo-fi edison bulb neutra squid.
-            Hella knausgaard mlkshk, hot chicken chartreuse flannel quinoa deep v shabby chic yr drinking vinegar.</p>
+    </header>
+    <main ui-view></main>
 
-          <p> Farm-to-table lo-fi kogi cronut, salvia small batch vexillologist echo park swag ugh sriracha you probably haven't heard of them intelligentsia.
-            Cold-pressed whatever leggings, crucifix tousled occupy prism irony hot chicken biodiesel.
-            Austin twee marfa, celiac church-key keytar gluten-free vexillologist sustainable succulents knausgaard hell of edison bulb flannel.
-            Synth tousled YOLO, quinoa kombucha food truck pork belly mixtape gochujang hexagon craft beer.
-            Narwhal helvetica tousled waistcoat lumbersexual, williamsburg direct trade DIY chartreuse banh mi jianbing fingerstache yuccie.</p>
+    <footer>
+      <p>&copy 2016 The Iron Yard Students
+        <small class='glyphicon glyphicon-envelope'></small>
+      </p>
+    </footer>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
+    <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='/js/hotel.module.js'></script>
+    <script src='/js/reservation.controller.js'></script>
+    <script src='/js/reservation.service.js'></script>
+    <script src='/js/login.controller.js'></script>
+    <script src='/js/login.service.js'></script>
 
-        </main>
-
-      <footer></footer>
-        <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
-        <script src='/js/hotel.module.js'></script>
-        <script src='/js/reservation.controller.js'></script>
-        <script src='/js/reservation.service.js'></script>
-        <script src='/js/login.controller.js'></script>
-        <script src='/js/login.service.js'></script>
-      </body>
+</body>
 
 </html>
