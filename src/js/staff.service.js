@@ -20,7 +20,6 @@
                 fullName: name,
                 email: email,
                 phone: phone,
-                // reservation: []
             };
             guests = angular.toJson(guests);
             console.log('Json guests = ', guests);
