@@ -15,7 +15,7 @@
 
 
       function getToken() {
-          console.log('getting the token from the func in log serv', token);
+        console.log('getting the token from the func in log serv', token);
         return token;
       }
    /**
@@ -53,6 +53,8 @@
             localStorage.setItem('token', angular.toJson(response.data.id));
             return 'success';
           });
+
+
    }
 
    /**

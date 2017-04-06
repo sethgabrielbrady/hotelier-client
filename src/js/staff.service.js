@@ -1,60 +1,57 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular.module('hotel')
-    .factory('StaffService', StaffService);
+    angular.module('hotel')
+        .factory('StaffService', StaffService);
 
-  StaffService.$inject = ['$http', 'UserService'];
+    StaffService.$inject = ['$http', 'UserService'];
 
-  function StaffService($http, UserService) {
+    function StaffService($http, UserService) {
 
-    let guests = JSON.parse(localStorage.getItem('guests')) || [];
+        console.log('in the  staff service ', UserService.getToken());
+        console.log(" cont guests is a ", typeof(guests));
 
-    console.log('in the  staff service', UserService.getToken());
-
-  /**
-   * Add guest to
-   */
-  function addGuest(guest) {
+        function addGuest(name, email, phone){
+            console.log('in addGuest in  STAFF service');
 
 
-    guests.push({
-      id: "",
-      fullname: guest.name,
-      email: guest.email,
-      phone: guest.phone,
-      reservation:[]
-    });
-    localStorage.setItem('guests', angular.toJson(guests));
+            let guests = {
+                fullname: name,
+                email: email,
+                phone: phone,
+                // reservation: []
+            };
+            guests = angular.toJson(guests);
+            console.log('Json guests = ', guests);
 
-    console.log(guests);//this is working, sorta
+        // console.log('UnJson guests?? = ',angular.fromJson(guests));
+
+        // console.log(guests); //this is working, sorta
+
+        return $http({
+                //TODO: check
+
+                url: 'https://panda-hotelier-api.herokuapp.com/api/Guests',
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': UserService.getToken()
+                },
+                data: guests
+              })
+            .then(function handleResponse(response) {
+              console.log(response.data);
+                return response.data;
+
+            });
+    }
 
 
-      return $http({
-        //TODO: check
+    return {
+        addGuest: addGuest
+    };
 
-        url: 'https://panda-hotelier-api.herokuapp.com/api/Guests',
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': UserService.getToken()
-        },
-        data: {
-          "id":guess.id,
-          'fullname': guest.name,
-          'email': guest.email,
-          'phone':guest.phonenumber,
-        }
+}//staffservice
 
-      })
-      .then(function handleResponse(response) {
-        return response.data;
-      });
-  }
 
-  return {
-    addGuest: addGuest
-  };
-
-  }
 }());

@@ -1,24 +1,27 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular.module('hotel').controller('StaffController', StaffController);
+    angular.module('hotel').controller('StaffController', StaffController);
 
-  StaffController.$inject =['StaffService'];
+    StaffController.$inject = ['StaffService'];
 
-  function StaffController(StaffService) {
-    let vm = this;
-    // vm.newGuest = {};
-    vm.guest = {};
+    function StaffController(StaffService) {
+        let vm = this;
+        vm.guest = {};
 
-    vm.addGuest = function addGuest(guest) {
-      StaffService.addGuest(guest.name, guest.email, guest.phone);
-
-    };
-
-    console.log('in the controller', vm.guest);
-
-  }
+        vm.addGuest = function addGuest(guest) {
+          console.log('Controller guest obj', guest);
+        StaffService.addGuest(guest.name, guest.email, guest.phone);
 
 
+
+        };
+
+        console.log('in the controller', vm.guest);
+
+
+
+
+}
 
 }());
