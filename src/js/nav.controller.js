@@ -1,15 +1,16 @@
 (function() {
   'use strict';
 
-  angular.module('hotel').controller('NavController', NavController);
+angular.module('hotel').controller('NavController', NavController);
 
-NavController.$inject = ['UserService'];
+NavController.$inject = ['$state', 'UserService'];
 
-function NavController(UserService) {
+function NavController($state, UserService) {
   let vm = this;
 
   vm.logout = function logout() {
     UserService.logout();
+    $state.go('home');
   };
 
   /**
@@ -17,8 +18,9 @@ function NavController(UserService) {
    * @param {token}
    * @return {Boolean}
    */
-  function isLoggedIn() {
+  vm.isLoggedIn = function isLoggedIn() {
+    console.log('show login', UserService.getToken());
     return !!UserService.getToken();
-  }
+  };
 }
 }());
