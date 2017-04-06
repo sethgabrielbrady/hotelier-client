@@ -11,8 +11,8 @@
     vm.guest = {};
 
     vm.addGuest = function addGuest(guest) {
-      StaffService.addGuest(guest.name, guest.email, guest.phonenumber);
-      
+      StaffService.addGuest(guest.name, guest.email, guest.phone);
+
     };
 
     console.log('in the controller', vm.guest);

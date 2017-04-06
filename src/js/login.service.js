@@ -8,6 +8,7 @@
  * Creates the service model for usernames
  */
  function UserService($http) {
+
    let users = JSON.parse(localStorage.getItem('users')) || [];
    let token = JSON.parse(localStorage.getItem('token')) || [];
     console.log(token);

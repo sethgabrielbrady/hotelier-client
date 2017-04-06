@@ -8,12 +8,28 @@
 
   function StaffService($http, UserService) {
 
+    let guests = JSON.parse(localStorage.getItem('guests')) || [];
+
     console.log('in the  staff service', UserService.getToken());
 
   /**
    * Add guest to
    */
   function addGuest(guest) {
+
+
+    guests.push({
+      id: "",
+      fullname: guest.name,
+      email: guest.email,
+      phone: guest.phone,
+      reservation:[]
+    });
+    localStorage.setItem('guests', angular.toJson(guests));
+
+    console.log(guests);//this is working, sorta
+
+
       return $http({
         //TODO: check
 
@@ -24,8 +40,12 @@
           'Authorization': UserService.getToken()
         },
         data: {
-          content: guest
+          "id":guess.id,
+          'fullname': guest.name,
+          'email': guest.email,
+          'phone':guest.phonenumber,
         }
+
       })
       .then(function handleResponse(response) {
         return response.data;

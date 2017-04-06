@@ -2,6 +2,7 @@
 
 <form class='createguest' name='createguest' ng-submit='staffCtrl.addGuest(staffCtrl.guest)'>
   <label for='full-name' class='createguestlabel'>Full Name</label>
+
   <input type='text' name='First Name' class='createguestinput'
   ng-model='staffCtrl.guest.name' placeholder='Full Name' id='full-name'>
 
@@ -12,7 +13,7 @@
   <label for='phone-number' class='createguestlabel'>Phone Number</label>
 
   <input type='text' name='Phone Number' class='createguestinput'
-  ng-model='staffCtrl.guest.phonenumber' placeholder='Phone Number' id='phone-number'>
+  ng-model='staffCtrl.guest.phone' placeholder='Phone Number' id='phone-number'>
 
   <input class='btn btn-info' type='submit' value='Submit'>
 </form>
