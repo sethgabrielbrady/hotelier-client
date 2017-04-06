@@ -35,6 +35,7 @@
       vm.newUser = {};
     };
     vm.logoutUser = function logoutUser() {
+      console.log(localStorage.getItem('token'))
       UserService.logoutUser();
     };
     vm.removeUser = function removeUser(user) {
@@ -44,4 +45,3 @@
 
   }
 }());
-
