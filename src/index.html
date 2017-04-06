@@ -27,7 +27,9 @@
                 <li><a ui-sref='create-guest'>create guest</a></li>
                 <li><a ui-sref='create-reservation'>create reservation</a></li>
                 <li><a ui-sref='reservations'>reservations</a></li>
-                <li ng-controller='LoginController as Login'><a ng-click='Login.logoutUser()' ui-sref='login'>logout</a></li>
+
+                <li ng-controller='LoginController as loginCtrl'><a ng-click='loginCtrl.logoutUser()' ui-sref='login'>logout</a></li>
+
                 <li><a ui-sref='login'>login</a></li>
             </ul>
         </nav>
@@ -46,7 +48,9 @@
     <!-- <script src='/js/reservation.controller.js'></script>
     <script src='/js/reservation.service.js'></script> -->
     <script src='/js/login.controller.js'></script>
-    <script src='/js/login.service.js'></script>
+    <script src='/js/user.service.js'></script>
+    <script src='/js/staff.service.js'></script>
+    <script src='/js/staff.controller.js'></script>
 
 
 </body>

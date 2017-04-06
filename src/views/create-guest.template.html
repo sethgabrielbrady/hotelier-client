@@ -1,15 +1,19 @@
 <h2>Create Guest</h2>
 
-<form class='createguest' name='createguest' ng-submit='createguest.$valid'>
+<form class='createguest' name='createguest' ng-submit='staffCtrl.addGuest(staffCtrl.guest)'>
   <label for='full-name' class='createguestlabel'>Full Name</label>
-  <input type='text' name='First Name' class='createguestinput' placeholder='Full Name' id='full-name' required>
+
+  <input type='text' name='First Name' class='createguestinput'
+  ng-model='staffCtrl.guest.name' placeholder='Full Name' id='full-name'>
 
   <label for='e-mail' class='createguestlabel'>E-mail</label>
-  <input type='email' name='E-mail' class='createguestinput' placeholder='E-mail' id='e-mail' required>
+  <input type='email' name='E-mail' class='createguestinput'
+  ng-model='staffCtrl.guest.email' placeholder='E-mail' id='e-mail'>
 
   <label for='phone-number' class='createguestlabel'>Phone Number</label>
 
-  <input type='number' name='Phone Number' class='createguestinput' placeholder='Phone Number' id='phone-number' required>
+  <input type='text' name='Phone Number' class='createguestinput'
+  ng-model='staffCtrl.guest.phone' placeholder='Phone Number' id='phone-number'>
 
   <input class='btn btn-info' type='submit' value='Submit'>
 </form>

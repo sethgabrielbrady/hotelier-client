@@ -37,7 +37,9 @@
           .state({
             name: 'create-guest',
             url: '/create-guest',
-            templateUrl: 'views/create-guest.template.html'
+            templateUrl: 'views/create-guest.template.html',
+            controller: 'StaffController',
+            controllerAs: 'staffCtrl'
           })
           .state({
             name: 'create-reservation',
