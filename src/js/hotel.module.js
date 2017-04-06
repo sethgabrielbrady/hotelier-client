@@ -44,7 +44,9 @@
           .state({
             name: 'create-reservation',
             url: '/create-reservation',
-            templateUrl: 'views/create-reservation.template.html'
+            templateUrl: 'views/create-reservation.template.html',
+            controller: 'ReservationController',
+            controllerAs: 'reservationCtrl'
           })
           .state ({
             name: 'not-found',
