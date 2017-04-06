@@ -10,11 +10,19 @@
     function UserService($http) {
 
         let users = JSON.parse(localStorage.getItem('users')) || [];
-        let token = JSON.parse(localStorage.getItem('token')) || [];
+        let token = JSON.parse(localStorage.getItem('token'));
 
         function getToken() {
             console.log('getting the token from the func in log serv', token);
             return token;
+        }
+
+        function logout() {
+          token = null;
+          localStorage.removeItem('token');
+          //TODO: send an API call to the server to logout
+          //      but we have to tell the server who we are
+          //      by sending the token in the authorization header
         }
 
         /**
@@ -29,7 +37,7 @@
          * Adds a new user when they log in
          * @param {Object} user User information containing username & timestamp
          */
-        function addUser(user) {
+        function login(user) { //probably should be named login, and in return and in the controller, html
             if (typeof(user) !== 'object') {
                 return console.log('not an object');
             }
@@ -72,10 +80,11 @@
 
         return {
             getUsername: getUsername,
-            addUser: addUser,
+            login: login,
             removeUser: removeUser,
             logoutUser: logoutUser,
-            getToken: getToken
+            getToken: getToken,
+            logout: logout
         };
     }
 }());
