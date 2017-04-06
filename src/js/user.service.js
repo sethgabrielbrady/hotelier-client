@@ -60,6 +60,7 @@
                 console.log(response.status);
                 console.log(response.data);
                 localStorage.setItem('token', angular.toJson(response.data.id));
+                token = angular.toJson(response.data.id);
                 return 'success';
             });
         }
