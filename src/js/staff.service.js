@@ -11,47 +11,47 @@
         console.log('in the  staff service ', UserService.getToken());
         console.log(" cont guests is a ", typeof(guests));
 
-        function addGuest(name, email, phone){
+        function addGuest(name, email, phone) {
             console.log('in addGuest in  STAFF service');
 
 
             let guests = {
-                fullname: name,
+                id: "",
+                fullName: name,
                 email: email,
                 phone: phone,
                 // reservation: []
             };
             guests = angular.toJson(guests);
             console.log('Json guests = ', guests);
+            console.log('in STAFF', typeof(UserService.getToken()));
+            // console.log('UnJson guests?? = ',angular.fromJson(guests));
+            // console.log(guests); //this is working, sorta
 
-        // console.log('UnJson guests?? = ',angular.fromJson(guests));
+            return $http({
+                    //TODO: check
 
-        // console.log(guests); //this is working, sorta
+                    url: 'https://panda-hotelier-api.herokuapp.com/api/Guests',
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': UserService.getToken()
+                    },
+                    data: guests
+                })
+                .then(function handleResponse(response) {
+                    console.log(response.data);
+                    return response.data;
 
-        return $http({
-                //TODO: check
-
-                url: 'https://panda-hotelier-api.herokuapp.com/api/Guests',
-                method: 'post',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': UserService.getToken()
-                },
-                data: guests
-              })
-            .then(function handleResponse(response) {
-              console.log(response.data);
-                return response.data;
-
-            });
-    }
+                });
+        }
 
 
-    return {
-        addGuest: addGuest
-    };
+        return {
+            addGuest: addGuest
+        };
 
-}//staffservice
+    } //staffservice
 
 
 }());

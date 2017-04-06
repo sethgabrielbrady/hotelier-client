@@ -11,11 +11,12 @@
 
    let users = JSON.parse(localStorage.getItem('users')) || [];
    let token = JSON.parse(localStorage.getItem('token')) || [];
-    console.log(token);
+    console.log(typeof(token));
 
 
       function getToken() {
         console.log('getting the token from the func in log serv', token);
+        // token = angular.fromJson('token');
         return token;
       }
    /**
