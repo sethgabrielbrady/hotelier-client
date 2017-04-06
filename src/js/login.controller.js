@@ -17,11 +17,11 @@
         vm.users = UserService.getUsername();
 
         /**
-         * Creates new user after logging in
+         * Logs in a new user
          * @param {Object} user Information about user
          */
-        vm.addUser = function addUser(user) {
-            UserService.addUser(user).then(function handleResponse(success) {
+        vm.login = function login(user) {
+            UserService.login(user).then(function handleResponse(success) {
                     $state.go('reservations');
                 })
                 .catch(function handleError(error) {
