@@ -18,10 +18,10 @@ body {
 main {
   color: #ffffff; }
 
-.find-reservation {
+.find-reservation .form-group {
   display: flex;
   justify-content: space-between; }
-  .find-reservation input {
-    width: 48%; }
+.find-reservation input {
+  width: 48%; }
 
 /*# sourceMappingURL=style.css.map */

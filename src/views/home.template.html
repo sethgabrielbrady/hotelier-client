@@ -1,6 +1,19 @@
 <h2>Home</h2>
 
-<form class='form-inline find-reservation'>
-  <input type='text' id='reservation-id' name='reservation-id' placeholder='Reservation ID' class='form-control'>
-  <input type='submit' value='Find reservation' class='btn btn-primary'>
+<form name='findReservation'
+      class='form-inline find-reservation'
+      ng-controller='ReservationController as resCtrl'
+      ng-submit='findReservation.$valid && resCtrl.findReservation(resCtrl.reservationInfo.id)'
+      novalidate>
+
+  <p ng-show='findReservation.reservationId.$touched && !findReservation.reservationId.$valid'
+     ng-cloak
+     class='alert alert-warning'>
+    Please enter a reservation ID to find!
+  </p>
+
+  <aside class='form-group'>
+    <input type='text' name='reservationId' ng-model='resCtrl.reservationInfo.id' placeholder='Reservation ID' class='form-control' required>
+    <input type='submit' value='Find reservation' class='btn btn-primary'>
+  </aside>
 </form>
