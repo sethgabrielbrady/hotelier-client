@@ -4,13 +4,13 @@
 
 
   <label for='check-in'>Check in</label>
-  <input type='date' name='checkIn' id='check-in' ng-model ='reservationCtrl.guest.inDate' required>
+  <input type='date' name='checkIn' id='check-in' ng-model ='reservationCtrl.guest.checkinDate' required>
 
   <label for='check-out'>Check out</label>
-  <input type='date' name='checkOut' id='check-out' ng-model ='reservationCtrl.guest.outDate' required>
+  <input type='date' name='checkOut' id='check-out' ng-model ='reservationCtrl.guest.checkoutDate' required>
 
   <label for='number-of-guests'>Number of Guests'</label>
-  <input type='number' name='numberOfGuests' id='number-of-guests' ng-model ='reservationCtrl.guest.guestNumber'  placeholder='1' min='1' required>
+  <input type='number' name='numberOfGuests' id='number-of-guests' ng-model ='reservationCtrl.guest.numberOfGuests'  placeholder='1' min='1' required>
 
   <label for='guest-id'>Guest</label>
   <input type='text' name='guestID' id='guest-id' ng-model ='reservationCtrl.guest.guestId' placeholder='Guest ID#' required>

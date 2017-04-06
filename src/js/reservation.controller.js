@@ -15,13 +15,18 @@
 
       function ReservationController(ReservationService, $state){
         let vm = this;
+        vm.guest = {};
         console.log(ReservationService)
           vm.createReservation = function(newReservation) {
             console.log('token', localStorage.getItem('token'));
             let token =  localStorage.getItem('token')
             ReservationService.createReservation(newReservation, token)
           }
-
+          /**
+           * Gets list of all reservations
+           * @return {void}
+           */
+          vm.getReservations = function();
       }
 
 
