@@ -4,14 +4,12 @@
   angular.module('hotel')
     .factory('StaffService', StaffService);
 
-  StaffService.$inject = ['$http'];
+  StaffService.$inject = ['$http', 'UserService'];
 
-  function StaffService($http, LoginService) {
+  function StaffService($http, UserService) {
 
+    console.log('in the  staff service', UserService.getToken());
 
-    function getToken(){
-      return LoginService.getToken();
-    }
   /**
    * Add guest to
    */
@@ -23,7 +21,7 @@
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': getToken()
+          'Authorization': UserService.getToken()
         },
         data: {
           content: guest

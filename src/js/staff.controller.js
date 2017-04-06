@@ -12,9 +12,10 @@
 
     vm.addGuest = function addGuest(guest) {
       StaffService.addGuest(guest.name, guest.email, guest.phonenumber);
+      
     };
 
-    console.log('in the controller', vm.newGuest);
+    console.log('in the controller', vm.guest);
 
   }
 
