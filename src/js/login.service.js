@@ -9,11 +9,12 @@
  */
  function UserService($http) {
    let users = JSON.parse(localStorage.getItem('users')) || [];
-   let token = JSON.parse(localStorage.getItem('token')) || [];
-
-  function getToken() {
-    return token;
-  }
+  let token = JSON.parse(localStorage.getItem('token')) || [];
+    console.log(token);
+      function getToken() {
+          console.log('getting the token from the func in log serv', token);
+        return token;
+      }
    /**
    * Gathers all of the users information
    * @return {Array} Array containing details of user

@@ -8,6 +8,10 @@
 
   function StaffService($http, LoginService) {
 
+
+    function getToken(){
+      return LoginService.getToken();
+    }
   /**
    * Add guest to
    */
@@ -19,7 +23,7 @@
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': LoginService.getToken()
+          'Authorization': getToken()
         },
         data: {
           content: guest

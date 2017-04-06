@@ -41,7 +41,5 @@
       UserService.removeUser(user);
     };
 
-
   }
 }());
-
