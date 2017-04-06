@@ -3,28 +3,30 @@
 
       angular.module('hotel')
           .factory('ReservationService', ReservationService);
-          ReservationService.$inject= ['$http'];
+          ReservationService.$inject= ['$http', 'UserService'];
 
-          function ReservationService($http) {
+          function ReservationService($http, UserService) {
             // console.log('Inside the service');
 
-            function createReservation(newReservation, token) {
-              console.log('token in service', token);
+            function createReservation(newReservation) {
+              console.log('token in service');
               // if(newReservation.checkoutDate < newReservation.checkinDate){
               //   console.log('Checkout date can\'t be before checkin date!');
               //   return
               // }
-              console.log('token in service', token);
-                $http({
+              console.log('token in service');
+                return $http({
                   method: 'POST',
                   url: 'https://panda-hotelier-api.herokuapp.com/api/Reservations',
                   headers: {
-                     Authorization: token
+                    'Content-Type': 'application/json',
+                    'Authorization': UserService.getToken()
                  },
                   data: newReservation
-                }).then(function(data){
-                  console.log(data)
-                })
+                }).then(function handleResponse(response){
+                  console.log(response.data);
+                  return response.data
+                });
             }
             return {
               createReservation: createReservation
