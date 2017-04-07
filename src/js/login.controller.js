@@ -21,7 +21,7 @@
          * @param {Object} user Information about user
          */
         vm.login = function login(user) {
-            UserService.login(user).then(function handleResponse(success) {
+            UserService.login(user).then(function handleResponse() {
                     $state.go('reservations');
                 })
                 .catch(function handleError(error) {
