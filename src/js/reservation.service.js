@@ -1,6 +1,7 @@
 (function() {
   'use strict';
 
+
   angular.module('hotel')
   .factory('ReservationService', ReservationService);
   ReservationService.$inject= ['$http', 'UserService'];
@@ -81,6 +82,5 @@
     };
 
   }
-
 
 }());

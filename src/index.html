@@ -5,8 +5,6 @@
     <meta charset='utf-8'>
     <title>Hotelier</title>
 
-
-
     <meta name='description' content=''>
     <meta name='author' content='Panda'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -19,17 +17,48 @@
     <header>
         <h1>Hotelier</h1>
         <h2>Easier reservations for tomorrow, today.</h2>
-        <nav>
+        <nav ng-controller='NavController as navCtrl'>
             <ul>
-                <li><a ui-sref='home'>home</a></li>
-                <li><a ui-sref='about-us'>about our hotel</a></li>
-                <li><a ui-sref='all-guests'>all guests</a></li>
-                <li><a ui-sref='create-guest'>create guest</a></li>
-                <li><a ui-sref='create-reservation'>create reservation</a></li>
-                <li><a ui-sref='upcoming-reservations'>reservations</a></li>
-                <li ng-controller='LoginController as loginCtrl'><a ng-click='loginCtrl.logoutUser()' ui-sref='login'>logout</a></li>
-
-                <li><a ui-sref='login'>login</a></li>
+                <li>
+                    <a ui-sref='home'>
+                    home
+                  </a>
+                </li>
+                <li>
+                    <a ui-sref='about-us'>
+                    about our hotel
+                  </a>
+                </li>
+                <li ng-show='navCtrl.isLoggedIn()'>
+                    <a ui-sref='all-guests'>
+                    all guests
+                  </a>
+                </li>
+                <li ng-show='navCtrl.isLoggedIn()'>
+                    <a ui-sref='create-guest'>
+                    create guest
+                  </a>
+                </li>
+                <li ng-show='navCtrl.isLoggedIn()'>
+                    <a ui-sref='create-reservation'>
+                    create reservation
+                  </a>
+                </li>
+                <li ng-show='navCtrl.isLoggedIn()'>
+                    <a ui-sref='reservations'>
+                    reservations
+                  </a>
+                </li>
+                <li ng-show='navCtrl.isLoggedIn()' ng-click='navCtrl.logout()'>
+                    <a>
+                    logout
+                  </a>
+                </li>
+                <li ng-hide='navCtrl.isLoggedIn()'>
+                    <a ui-sref='login'>
+                    login
+                  </a>
+                </li>
             </ul>
         </nav>
 
@@ -37,9 +66,9 @@
     <main ui-view></main>
 
     <footer>
-      <p>&copy 2016 The Iron Yard Students
-        <small class='glyphicon glyphicon-envelope'></small>
-      </p>
+        <p>&copy 2016 The Iron Yard Students
+            <small class='glyphicon glyphicon-envelope'></small>
+        </p>
     </footer>
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
     <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
@@ -52,12 +81,10 @@
     <script src='/js/staff.controller.js'></script>
     <script src='/js/upcoming.reservation.controller.js'></script>
     <script src='/js/guest.reservation.controller.js'></script>
-
-
-
-
+    <script src='/js/nav.controller.js'></script>
 
 
 
 </body>
+
 </html>

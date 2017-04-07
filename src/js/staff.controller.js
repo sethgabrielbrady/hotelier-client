@@ -10,10 +10,8 @@
         vm.guest = {};
 
         vm.addGuest = function addGuest(guest) {
-          console.log('Controller guest obj', guest);
-        StaffService.addGuest(guest.name, guest.email, guest.phone);
-
-
+            console.log('Controller guest obj', guest);
+            StaffService.addGuest(guest.name, guest.email, guest.phone);
 
         };
 
@@ -22,6 +20,6 @@
 
 
 
-}
+    }
 
 }());
