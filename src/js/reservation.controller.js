@@ -20,6 +20,7 @@
     if ($stateParams.id) {
       ReservationService.getReservation($stateParams.id)
         .then(function showData(reservation) {
+          console.log('retrieved reservation data:', reservation);
           vm.reservationInfo = reservation;
         })
         .catch(function handleBadAPIRequest(err) {
