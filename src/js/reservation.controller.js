@@ -16,6 +16,7 @@
     let vm = this;
 
     vm.reservationInfo = {};
+    vm.message = null;
 
     if ($stateParams.id) {
       ReservationService.getReservation($stateParams.id)
@@ -25,7 +26,7 @@
         })
         .catch(function handleBadAPIRequest(err) {
           console.warn(err);
-          // TODO: what next?
+          vm.message = 'Sorry, but there was a problem retrieving that reservation.';
         });
     }
 
