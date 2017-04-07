@@ -17,8 +17,8 @@ function NavController(UserService) {
    * @param {token}
    * @return {Boolean}
    */
-  // function isLoggedIn() {
-  //   return !!UserService.getToken();
-  // }
+  function isLoggedIn() {
+    return !!UserService.getToken();
+  }
 }
 }());
