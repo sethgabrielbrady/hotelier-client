@@ -1,0 +1,26 @@
+
+<section class='single-reservation'>
+
+  <h3>Reservation #{{resCtrl.reservationInfo.id}}</h3>
+
+  <p ng-show='resCtrl.message' ng-cloak class='alert alert-warning'>
+    {{resCtrl.message}}
+  </p>
+
+  <aside class='guest-info'>
+    <h4>{{resCtrl.reservationInfo.guest.fullName}}</h4>
+    <h5>{{resCtrl.reservationInfo.guest.email}}</h5>
+    <h5>{{resCtrl.reservationInfo.guest.phone}}</h5>
+  </aside>
+
+  <aside class='room-info'>
+    <h4>Room #{{resCtrl.reservationInfo.room.number}}</h4>
+    <h5>Max Occupancy: {{resCtrl.reservationInfo.room.maxOccupancy}}</h5>
+  </aside>
+
+  <aside class='dates'>
+    <p>Check in: {{resCtrl.reservationInfo.checkinDate | date:"M/d/y"}}</p>
+    <p>Check out: {{resCtrl.reservationInfo.checkoutDate | date:"M/d/y"}}</p>
+  </aside>
+
+</section>

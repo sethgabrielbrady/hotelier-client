@@ -7,9 +7,32 @@ header {
   header h1 {
     font-size: 4em;
     font-weight: normal;
-    text-shadow: 2px 2px 4px black; }
+    text-shadow: 2px 2px 4px #8e8e8e; }
   header h2 {
     font-size: 1.5em;
     font-weight: normal; }
+
+body {
+  font-family: 'Roboto'; }
+
+main {
+  color: #ffffff; }
+
+.find-reservation .form-group {
+  display: flex;
+  justify-content: space-between; }
+.find-reservation input {
+  width: 48%; }
+
+.single-reservation {
+  color: black;
+  text-align: center; }
+  .single-reservation .guest-info, .single-reservation .room-info {
+    width: 50%;
+    border: 1px solid #b4b4b4;
+    border-radius: 0.3em;
+    margin: 1em auto; }
+  .single-reservation .dates {
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

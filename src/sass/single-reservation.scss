@@ -1,0 +1,17 @@
+
+.single-reservation {
+    color: $mainContentTextColor;
+    text-align: center;
+
+    .guest-info, .room-info {
+        width: $mobileReservationDetailWidth;
+        border: $themeBorder;
+        border-radius: $themeBorderRadius;
+        margin: $mobileReservationDetailMargin;
+    }
+
+    .dates {
+        font-weight: bold;
+    }
+    
+}
