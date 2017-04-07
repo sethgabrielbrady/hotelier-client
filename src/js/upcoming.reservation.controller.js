@@ -13,6 +13,7 @@
   * @param {Function} ReservationService this manages the reservation information
   */
 
+
   function UpcomingReservationController(ReservationService, $state){
     let vm = this;
     vm.reservations = ReservationService.getReservations().then(function handleSuccess(data){
