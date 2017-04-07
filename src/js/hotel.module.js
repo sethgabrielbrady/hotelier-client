@@ -53,7 +53,9 @@
           .state({
             name: 'single-reservation',
             url: '/reservation/:id',
-            templateUrl: 'views/single-reservation.template.html'
+            templateUrl: 'views/single-reservation.template.html',
+            controller: 'ReservationController',
+            controllerAs: 'resCtrl'
           })
           .state ({
             name: 'not-found',

@@ -4,17 +4,29 @@
   angular.module('hotel')
       .controller('ReservationController', ReservationController);
 
-  ReservationController.$inject = ['$state'];
+  ReservationController.$inject = ['$state', '$stateParams', 'ReservationService'];
 
   /**
    * The ReservationController
-   * @param {Object} $state Necessary so we can take the user to another state when entering a reservation ID
+   * @param {Object} $state       Necessary so we can take the user to another state when entering a reservation ID
+   * @param {Object} $stateParams The parameters... which might have an ID in it if we're on the single-res view
    * @return {void}
    */
-  function ReservationController($state) {
+  function ReservationController($state, $stateParams, ReservationService) {
     let vm = this;
 
     vm.reservationInfo = {};
+
+    if ($stateParams.id) {
+      ReservationService.getReservation($stateParams.id)
+        .then(function showData(reservation) {
+          vm.reservationInfo = reservation;
+        })
+        .catch(function handleBadAPIRequest(err) {
+          console.warn(err);
+          // TODO: what next?
+        });
+    }
 
     /**
      * Send the user to the single reservation view when they enter an ID
@@ -27,6 +39,7 @@
 
       $state.go('single-reservation', { id: id });
     };
+
   }
 
 }());
