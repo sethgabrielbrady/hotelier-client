@@ -13,7 +13,7 @@
   * @param {Function} ReservationService this manages the reservation information
   */
 
-  function ReservationController(ReservationService, $state){
+  function ReservationController(ReservationService){
     let vm = this;
     vm.guest = {};
     console.log(ReservationService);
