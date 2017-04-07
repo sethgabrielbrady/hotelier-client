@@ -24,4 +24,7 @@ main {
 .find-reservation input {
   width: 48%; }
 
+.single-reservation h3 {
+  color: black; }
+
 /*# sourceMappingURL=style.css.map */

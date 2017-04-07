@@ -50,6 +50,11 @@
             templateUrl: 'views/create-reservation.template.html',
             requiresLoginToView: true
           })
+          .state({
+            name: 'single-reservation',
+            url: '/reservation/:id',
+            templateUrl: 'views/single-reservation.template.html'
+          })
           .state ({
             name: 'not-found',
             url: '/not-found',
