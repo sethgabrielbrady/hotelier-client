@@ -20,42 +20,42 @@
         <nav ng-controller='NavController as navCtrl'>
             <ul>
                 <li>
-                  <a ui-sref='home'>
+                    <a ui-sref='home'>
                     home
                   </a>
                 </li>
                 <li>
-                  <a ui-sref='about-us'>
+                    <a ui-sref='about-us'>
                     about our hotel
                   </a>
                 </li>
                 <li ng-show='navCtrl.isLoggedIn()'>
-                  <a ui-sref='all-guests'>
+                    <a ui-sref='all-guests'>
                     all guests
                   </a>
                 </li>
                 <li ng-show='navCtrl.isLoggedIn()'>
-                  <a ui-sref='create-guest'>
+                    <a ui-sref='create-guest'>
                     create guest
                   </a>
                 </li>
                 <li ng-show='navCtrl.isLoggedIn()'>
-                  <a ui-sref='create-reservation'>
+                    <a ui-sref='create-reservation'>
                     create reservation
                   </a>
                 </li>
                 <li ng-show='navCtrl.isLoggedIn()'>
-                  <a ui-sref='reservations'>
+                    <a ui-sref='reservations'>
                     reservations
                   </a>
                 </li>
                 <li ng-show='navCtrl.isLoggedIn()' ng-click='navCtrl.logout()'>
-                  <a>
+                    <a>
                     logout
                   </a>
                 </li>
                 <li ng-hide='navCtrl.isLoggedIn()'>
-                  <a ui-sref='login'>
+                    <a ui-sref='login'>
                     login
                   </a>
                 </li>
@@ -66,9 +66,9 @@
     <main ui-view></main>
 
     <footer>
-      <p>&copy 2016 The Iron Yard Students
-        <small class='glyphicon glyphicon-envelope'></small>
-      </p>
+        <p>&copy 2016 The Iron Yard Students
+            <small class='glyphicon glyphicon-envelope'></small>
+        </p>
     </footer>
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'></script>
     <script src='//unpkg.com/angular-ui-router/release/angular-ui-router.min.js'></script>
@@ -79,8 +79,12 @@
     <script src='/js/user.service.js'></script>
     <script src='/js/staff.service.js'></script>
     <script src='/js/staff.controller.js'></script>
+    <script src='/js/upcoming.reservation.controller.js'></script>
+    <script src='/js/guest.reservation.controller.js'></script>
     <script src='/js/nav.controller.js'></script>
 
 
+
 </body>
+
 </html>

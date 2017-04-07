@@ -20,9 +20,11 @@
          * Logs in a new user
          * @param {Object} user Information about user
          */
+
         vm.login = function login(user) {
-            UserService.login(user).then(function handleResponse(success) {
-                    $state.go('reservations');
+            UserService.login(user).then(function handleResponse() {
+                    $state.go('upcoming-reservations');
+
                 })
                 .catch(function handleError(error) {
                     console.log(error);

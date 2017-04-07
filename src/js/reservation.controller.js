@@ -2,7 +2,9 @@
   'use strict';
 
   angular.module('hotel')
-      .controller('ReservationController', ReservationController);
+  .controller('ReservationController', ReservationController);
+
+  // console.log('Inside the controller');
 
   ReservationController.$inject = ['$state', '$stateParams', 'ReservationService'];
 
@@ -17,6 +19,8 @@
 
     vm.reservationInfo = {};
     vm.message = null;
+    vm.guest = {};
+    console.log(ReservationService);
 
     if ($stateParams.id) {
       ReservationService.getReservation($stateParams.id)
@@ -29,7 +33,11 @@
           vm.message = 'Sorry, but there was a problem retrieving that reservation.';
         });
     }
-
+    vm.createReservation = function(newReservation) {
+      console.log('token', localStorage.getItem('token'));
+      let token =  localStorage.getItem('token');
+      ReservationService.createReservation(newReservation, token);
+    };
     /**
      * Send the user to the single reservation view when they enter an ID
      * @param  {String}  id The ID of the reservation to send them to

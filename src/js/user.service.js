@@ -18,11 +18,11 @@
         }
 
         function logout() {
-          token = null;
-          localStorage.removeItem('token');
-          //TODO: send an API call to the server to logout
-          //      but we have to tell the server who we are
-          //      by sending the token in the authorization header
+            token = null;
+            localStorage.removeItem('token');
+            //TODO: send an API call to the server to logout
+            //      but we have to tell the server who we are
+            //      by sending the token in the authorization header
         }
 
         /**
