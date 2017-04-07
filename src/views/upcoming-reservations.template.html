@@ -1,12 +1,9 @@
 <h2>Upcoming Reservations</h2>
-
-<ul>
-  <li class='panel panel-info'>
-    <h3>{{Date}} - Room # {{Room Number}}</h3>
+<article class='panel panel-info' ng-repeat='reservation in upcomingreservationCtrl.reservations'>
+    <h3>{{reservation.createDate | date:'dd:mm:yyyy'}} - Room # {{reservation.room.number}}</h3>
     <section class='panel-body'>
-      <p>Guest: {{}} ({{Number of People}} people)</p>
+      <p>Guest:{{reservation.guest.fullName}}({{reservation.numberOf}} people)</p>
       <button class='btn btn-danger' type='button' name='button'>Delete</button>
-      <p>Check out: {{Date}}</p>
+      <p>Check out: {{reservation.checkoutDate | date:'dd:mm:yyyy'}}</p>
     </section>
-  </li>
-</ul>
+</article>
