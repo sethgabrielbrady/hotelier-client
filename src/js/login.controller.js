@@ -22,7 +22,7 @@
          */
         vm.addUser = function addUser(user) {
             UserService.addUser(user).then(function handleResponse(success) {
-                    $state.go('reservations');
+                    $state.go('upcoming-reservations');
                 })
                 .catch(function handleError(error) {
                     console.log(error);

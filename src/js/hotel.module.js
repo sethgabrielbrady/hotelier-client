@@ -16,6 +16,8 @@
             name: 'home',
             url: '/',
             templateUrl: 'views/home.template.html',
+            controller: 'GuestReservationController',
+            controllerAs: 'guestresCtrl'
           })
           .state({
               name: 'login',
@@ -55,7 +57,7 @@
           })
           .state({
             name: 'reservations',
-            url: '/reservations',
+            url: '/reservations/:id', //how you pass over the data that we need for reso page
             templateUrl: 'views/reservations.template.html'
           })//might not need this
           .state({

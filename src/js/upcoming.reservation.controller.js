@@ -19,6 +19,8 @@
         console.log('im in this function');
         console.log(data);
         vm.reservations = data;
+        //had to set vm reservations to data so that angular digest cycle catches this
+        //will run into more of this when we do more async stuff
         return data;
       });
     console.log(ReservationService);
