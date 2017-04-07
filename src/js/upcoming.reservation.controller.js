@@ -1,30 +1,30 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular.module('hotel')
-        .controller('UpcomingReservationController', UpcomingReservationController);
-    // console.log('Inside the controller');
+  angular.module('hotel')
+  .controller('UpcomingReservationController', UpcomingReservationController);
+  // console.log('Inside the controller');
 
 
-    UpcomingReservationController.$inject = ['ReservationService', '$state'];
+  UpcomingReservationController.$inject = ['ReservationService', '$state'];
 
-    /**
-     * Creates a log in controller so application can have miltiple users
-     * @param {Function} ReservationService this manages the reservation information
-     */
+  /**
+  * Creates a log in controller so application can have miltiple users
+  * @param {Function} ReservationService this manages the reservation information
+  */
 
-    function UpcomingReservationController(ReservationService, $state) {
-        let vm = this;
-        vm.reservations = ReservationService.getReservations().then(function handleSuccess(data) {
-            console.log('im in this function');
-            console.log(data);
-            vm.reservations = data;
-            //had to set vm reservations to data so that angular digest cycle catches this
-            //will run into more of this when we do more async stuff
-            return data;
-        });
-        console.log(ReservationService);
-    }
+  function UpcomingReservationController(ReservationService, $state){
+    let vm = this;
+    vm.reservations = ReservationService.getReservations().then(function handleSuccess(data){
+        console.log('im in this function');
+        console.log(data);
+        vm.reservations = data;
+        //had to set vm reservations to data so that angular digest cycle catches this
+        //will run into more of this when we do more async stuff
+        return data;
+      });
+    console.log(ReservationService);
+  }
 
 
 
