@@ -44,7 +44,10 @@
       name: 'all-guests',
       url: '/all-guests',
       templateUrl: 'views/all-guests.template.html',
-      requiresLoginToView: true
+      requiresLoginToView: true,
+      controller: 'ReservationController',
+      controllerAs: 'resCtrl'
+
     })
     .state({
       name: 'create-guest',
@@ -71,7 +74,9 @@
       name: 'reservations',
       url: '/reservations', //how you pass over the data that we need for reso page '/reservations/:id'
       templateUrl: 'views/reservations.template.html',
-      requiresLoginToView: true
+      requiresLoginToView: true,
+      controller: 'ReservationController',
+      controllerAs: 'resCtrl'
     })
 
     .state({

@@ -34,9 +34,9 @@ git push -u origin html2
 Team Panda
 
 
-guestId: '58e6c8af633af30011bd0120',
+guestId: '58e6c8af633af30011bd0120',  58ea6e9bd41a4600110ab785
 roomId: '58e297c33d5e770011657a85'
- reservation ID (58e6ca83633af30011bd0121)
+ reservation ID (58e6ca83633af30011bd0121), 
 
 ## THINGS THAT NEED TO BE DONE
 

@@ -1,4 +1,4 @@
-<h2>Reservation {{Number}}</h2>
+<!-- <h2>Reservation {{Number}}</h2>
 <section>
     <aside>
         <p>Name</p>
@@ -13,5 +13,34 @@
 
 <p>Check in: _Check in Date_</p>
 <p>Check out: _Check out Date_</p>
+<button class='btn btn-danger' type='button' name='button'>Delete</button> -->
 
-<button class='btn btn-danger' type='button' name='button'>Delete</button>
+
+
+<section class='reservation'>
+
+  <h3 ng-repeat ='reservationInfo in resCtrl.reservationInfo'>Reservation #{{resCtrl.reservationInfo.id}}</h3>
+  <p ng-show='resCtrl.message' ng-cloak class='alert alert-warning'>
+    {{resCtrl.message}}
+  </p>
+
+  <aside class='guest-info'>
+    <h4 ng-repeat ='reservationInfo in resCtrl.reservationInfo'>{{resCtrl.reservationInfo.guest.fullName}}</h4>
+    <h5 ng-repeat ='reservationInfo in resCtrl.reservationInfo'>{{resCtrl.reservationInfo.guest.email}}</h5>
+    <h5 ng-repeat ='reservationInfo in resCtrl.reservationInfo'>{{resCtrl.reservationInfo.guest.phone}}</h5>
+  </aside>
+
+  <aside class='room-info'>
+    <h4 ng-repeat ='reservationInfo in resCtrl.reservationInfo'>Room #{{resCtrl.reservationInfo.room.number}}</h4>
+    <h5 ng-repeat ='reservationInfo in resCtrl.reservationInfo'>Max Occupancy: {{resCtrl.reservationInfo.room.maxOccupancy}}</h5>
+  </aside>
+
+  <aside class='dates'>
+    <p ng-repeat ='reservationInfo in resCtrl.reservationInfo'>Check in: {{resCtrl.reservationInfo.checkinDate | date:"M/d/y"}}</p>
+    <p ng-repeat ='reservationInfo in resCtrl.reservationInfo'>Check out: {{resCtrl.reservationInfo.checkoutDate | date:"M/d/y"}}</p>
+  </aside>
+
+  <button class='btn btn-danger' type='button' name='button'>Delete</button>
+
+
+</section>
