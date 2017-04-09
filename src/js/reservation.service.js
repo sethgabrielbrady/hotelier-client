@@ -14,7 +14,7 @@
       // console.log('Inside the service');
 
       function createReservation(guest) {
-        console.log('token in service');
+        console.log('res service-token in service');
         // if(newReservation.checkoutDate < newReservation.checkinDate){
         //   console.log('Checkout date can\'t be before checkin date!');
         //   return
@@ -24,13 +24,13 @@
           checkinDate: guest.checkinDate,
           checkoutDate: guest.checkoutDate,
           numberOfGuests: guest.numberOfGuests,
-          guestId: '58e6c8af633af30011bd0120',
-          roomId: '58e297c33d5e770011657a85'
+          guestId: guest.guestId,
+          roomId: guest.roomId
         };
         console.log(reservation);
         console.log('toJson');
         reservation = angular.toJson(reservation);
-        console.log('token');
+        console.log(reservation);
 
         return $http({
           method: 'POST',
@@ -50,7 +50,7 @@
 
       function getReservations() {
 
-        return $http({//this is currently pointing tot he  single reservation view
+        return $http({
           url: 'https://panda-hotelier-api.herokuapp.com/api/Reservations/',
           method: 'get',
           headers: {

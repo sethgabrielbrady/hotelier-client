@@ -24,6 +24,7 @@
             guests = angular.toJson(guests);
             console.log('Json guests = ', guests);
             console.log('in STAFF', typeof(UserService.getToken()));
+            console.log(UserService.getToken());
             // console.log('UnJson guests?? = ',angular.fromJson(guests));
             // console.log(guests); //this is working, sorta
 
@@ -31,7 +32,7 @@
                     //TODO: check
 
                     url: 'https://panda-hotelier-api.herokuapp.com/api/Guests',
-                    method: 'post',
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': UserService.getToken()
@@ -43,6 +44,7 @@
                     return response.data;
                 });
         }
+
         return {
             addGuest: addGuest
         };

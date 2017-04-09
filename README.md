@@ -36,6 +36,7 @@ Team Panda
 
 guestId: '58e6c8af633af30011bd0120',
 roomId: '58e297c33d5e770011657a85'
+ reservation ID (58e6ca83633af30011bd0121)
 
 ## THINGS THAT NEED TO BE DONE
 

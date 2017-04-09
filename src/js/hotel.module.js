@@ -69,7 +69,7 @@
     })
     .state({
       name: 'reservations',
-      url: '/reservations/:id', //how you pass over the data that we need for reso page
+      url: '/reservations', //how you pass over the data that we need for reso page '/reservations/:id'
       templateUrl: 'views/reservations.template.html',
       requiresLoginToView: true
     })
