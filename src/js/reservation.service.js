@@ -50,8 +50,8 @@
 
       function getReservations() {
 
-        return $http({
-          url: 'https://panda-hotelier-api.herokuapp.com/api/Reservations',
+        return $http({//this is currently pointing tot he  single reservation view
+          url: 'https://panda-hotelier-api.herokuapp.com/api/Reservations/',
           method: 'get',
           headers: {
             'Content-Type': 'application/json',

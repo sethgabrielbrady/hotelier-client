@@ -32,3 +32,17 @@ git checkout html2
 git push -u origin html2
 ```
 Team Panda
+
+
+guestId: '58e6c8af633af30011bd0120',
+roomId: '58e297c33d5e770011657a85'
+
+## THINGS THAT NEED TO BE DONE
+
+1. fix the homepage so that it looks like it does in the mockups
+2. add the serif font
+3. make it responsive
+4. make sure everything has doc blocks
+5. figure out why nothing is happening when you make a reservation
+6. make sure the page goes to a single reservation when one is entered as a guest
+7. figure out why nothing is working
