@@ -20,14 +20,11 @@
     vm.reservationInfo = {};
     vm.message = null;
     vm.guest = {};
-    console.log(ReservationService);//listing the FN rom res service
 
     if ($stateParams.id) {
       ReservationService.getReservations($stateParams.id)
         .then(function showData(reservationInfo) {
-          console.log('retrieved reservation data:', reservationInfo);//this is working
           vm.reservationInfo = reservationInfo;
-          console.log(vm.reservationInfo);
 
         })
         .catch(function handleBadAPIRequest(err) {
@@ -36,7 +33,6 @@
         });
     }
     vm.createReservation = function(newReservation) {
-      console.log('token', localStorage.getItem('token'));
       let token =  localStorage.getItem('token');
       ReservationService.createReservation(newReservation, token);
     };

@@ -10,15 +10,9 @@
         vm.guest = {};
 
         vm.addGuest = function addGuest(guest) {
-            console.log('Controller guest obj', guest);
             StaffService.addGuest(guest.name, guest.email, guest.phone);
 
         };
-
-        console.log('in the controller', vm.guest);
-
-
-
 
     }
 
