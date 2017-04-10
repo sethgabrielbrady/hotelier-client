@@ -19,7 +19,7 @@ function NavController($state, UserService) {
    * @return {Boolean}
    */
   vm.isLoggedIn = function isLoggedIn() {
-    console.log('show login', UserService.getToken());
+    // console.log('show login', UserService.getToken());
     return !!UserService.getToken();
   };
 }

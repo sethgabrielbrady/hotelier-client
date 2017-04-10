@@ -15,7 +15,8 @@
 
     function UpcomingReservationController(ReservationService) {
         let vm = this;
-        vm.reservations = ReservationService.getReservations().then(function handleSuccess(data) {
+        vm.reservations = null;
+        vm.getReservations = ReservationService.getReservations().then(function handleSuccess(data) {
             console.log('im in this function');
             console.log(data);
             vm.reservations = data;
