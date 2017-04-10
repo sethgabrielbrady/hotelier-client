@@ -1,4 +1,9 @@
 <h2>All Guests</h2>
-  <p ng-repeat ='reservationInfo in resCtrl.reservationInfo'>
-    {{resCtrl.reservationInfo.guest.fullName}}</h4>
-</p>
+<article class='panel panel-info' ng-repeat='reservation in upcomingreservationCtrl.reservations'>
+    <h3>Guest:{{reservation.guest.fullName}}</h3>
+    <section class='panel-body'>
+        <p>Guest:{{reservation.guest.email}}</p>
+          <p>Guest:{{reservation.guest.number}}</p>
+
+    </section>
+</article>
