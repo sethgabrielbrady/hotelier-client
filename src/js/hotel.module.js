@@ -16,17 +16,20 @@
     $stateProvider
     .state({
       name: 'single-reservation',
-      url: '/reservation/:id',
+      url: '/single-reservation',
       templateUrl: 'views/single-reservation.template.html',
-      controller: 'ReservationController',
-      controllerAs: 'resCtrl'
+      controller: 'GuestReservationController',
+      controllerAs: 'guestResCtrl',
+      params: { // dont forget
+        id: null
+      }
     })
     .state({
       name: 'home',
       url: '/',
       templateUrl: 'views/home.template.html',
       controller: 'GuestReservationController',
-      controllerAs: 'guestresCtrl'
+      controllerAs: 'guestResCtrl'
     })
     .state({
       name: 'login',
@@ -44,7 +47,10 @@
       name: 'all-guests',
       url: '/all-guests',
       templateUrl: 'views/all-guests.template.html',
-      requiresLoginToView: true
+      requiresLoginToView: true,
+      controller: 'ReservationController',
+      controllerAs: 'resCtrl'
+
     })
     .state({
       name: 'create-guest',
@@ -67,12 +73,14 @@
       url: '/not-found',
       templateUrl: 'views/not-found.template.html'
     })
-    .state({
-      name: 'reservations',
-      url: '/reservations/:id', //how you pass over the data that we need for reso page
-      templateUrl: 'views/reservations.template.html',
-      requiresLoginToView: true
-    })
+    // .state({
+    //   name: 'reservations',
+    //   url: '/reservations', //how you pass over the data that we need for reso page '/reservations/:id'
+    //   templateUrl: 'views/reservations.template.html',
+    //   requiresLoginToView: true,
+    //   controller: 'ReservationController',
+    //   controllerAs: 'resCtrl'
+    // })
 
     .state({
       name: 'upcoming-reservations',

@@ -13,10 +13,10 @@ header {
     font-weight: normal; }
 
 body {
-  font-family: 'Roboto'; }
+  font-family: 'Open Sans', 'sans-serif'; }
 
 main {
-  color: #ffffff; }
+  color: black; }
 
 .find-reservation .form-group {
   display: flex;

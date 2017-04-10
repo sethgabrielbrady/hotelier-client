@@ -13,7 +13,7 @@
         let token = JSON.parse(localStorage.getItem('token'));
 
         function getToken() {
-            console.log('getting the token from the func in log serv', token);
+            // console.log('getting the token from the func in log serv', token);
             return token;
         }
 
@@ -57,10 +57,10 @@
                 }
 
             }).then(function handleResponse(response) {
-                console.log(response.status);
-                console.log(response.data);
+                // console.log(response.status);
+                // console.log(response.data);
                 localStorage.setItem('token', angular.toJson(response.data.id));
-                token = angular.toJson(response.data.id);
+                token = response.data.id;
                 return 'success';
             });
         }

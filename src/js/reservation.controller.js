@@ -20,13 +20,15 @@
     vm.reservationInfo = {};
     vm.message = null;
     vm.guest = {};
-    console.log(ReservationService);
+    console.log(ReservationService);//listing the FN rom res service
 
     if ($stateParams.id) {
-      ReservationService.getReservation($stateParams.id)
-        .then(function showData(reservation) {
-          console.log('retrieved reservation data:', reservation);
-          vm.reservationInfo = reservation;
+      ReservationService.getReservations($stateParams.id)
+        .then(function showData(reservationInfo) {
+          console.log('retrieved reservation data:', reservationInfo);//this is working
+          vm.reservationInfo = reservationInfo;
+          console.log(vm.reservationInfo);
+
         })
         .catch(function handleBadAPIRequest(err) {
           console.warn(err);
@@ -49,6 +51,8 @@
 
       $state.go('single-reservation', { id: id });
     };
+
+
 
   }
 

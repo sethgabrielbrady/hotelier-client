@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
-        clean: ['build'],
+        clean: ['build/'],
 
         jshint: {
             source: {
