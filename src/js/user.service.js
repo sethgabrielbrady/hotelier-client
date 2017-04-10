@@ -13,16 +13,13 @@
         let token = JSON.parse(localStorage.getItem('token'));
 
         function getToken() {
-            // console.log('getting the token from the func in log serv', token);
             return token;
         }
 
         function logout() {
             token = null;
             localStorage.removeItem('token');
-            //TODO: send an API call to the server to logout
-            //      but we have to tell the server who we are
-            //      by sending the token in the authorization header
+
         }
 
         /**
@@ -57,8 +54,7 @@
                 }
 
             }).then(function handleResponse(response) {
-                // console.log(response.status);
-                // console.log(response.data);
+
                 localStorage.setItem('token', angular.toJson(response.data.id));
                 token = response.data.id;
                 return 'success';

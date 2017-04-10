@@ -31,18 +31,12 @@ git branch html2
 git checkout html2
 git push -u origin html2
 ```
-Team Panda
 
-
-guestId: '58e6c8af633af30011bd0120',  58ea6e9bd41a4600110ab785
-roomId: '58e297c33d5e770011657a85'
- reservation ID (58e6ca83633af30011bd0121),
-
-## THINGS THAT NEED TO BE DONE
-
-1. fix the homepage so that it looks like it does in the mockups
-2. add the serif font
-3. make it responsive
-4. make sure everything has doc blocks
-5. check indentation
-6. populate the All Guests page
+## Current Build 04/09/17
+The current build is is using Get and Post successfully with the API. All Guest
+page is populated with the name, email, and phone number of all the guests
+in the system. The Upcoming Reservations page shows all the future Reservations
+with a option the delete it. If a non-staff user enters a reservation id into
+the search input on the Home page, it will take them to the reservation information
+on the Single-Reservation page. A staff user can create a guest as well as create a
+reservation.

@@ -22,7 +22,6 @@
         vm.id = null;
         vm.singleReservation = function(id) {
             ReservationService.getGuestReservation(id).then(function handleSuccess(data) {
-                console.log(' guest reservation data', data);
                 $state.go('single-reservation', {
                     id: data
                 });
@@ -30,10 +29,7 @@
         };
 
         if ($stateParams.id) {
-            console.log($stateParams);
-            // console.log("Inside guest reservation");
             vm.reservationInfo = $stateParams.id;
-            console.log(vm.reservationInfo);
 
         }
 

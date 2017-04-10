@@ -88,7 +88,6 @@
   function setUpAuthorizationCheck($rootScope, $state, UserService) {
 
     $rootScope.$on('$stateChangeStart', function checkLoginStatus(eventObj, toState) {
-      console.log('this is our token', UserService.getToken());
       if (toState.requiresLoginToView && !UserService.getToken()) {
         eventObj.preventDefault();
         $state.go('login');
