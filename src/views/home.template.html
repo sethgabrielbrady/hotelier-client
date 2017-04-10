@@ -17,8 +17,12 @@
     <input type='submit' value='Find reservation' class='btn btn-primary'>
   </aside>
 
-<!-- <form ng-submit='guestresCtrl.singleReservation(guestresCtrl.id)'> -->
-  <!-- <input ng-model='guestresCtrl.id' type='text'>
-  <input class='btn btn-info' type='submit' value='Find Reservation'> -->
-
 </form>
+
+<section ng-controller="UpcomingReservationController as upcomingreservationCtrl">
+<fieldset class="box" ng-repeat='reservation in upcomingreservationCtrl.reservations'>
+    <p>{{reservation.room.number}}</p>
+    <p>{{reservation.room.maxOccupancy}}</p>
+    <p>{{reservation.room.rate}}</p>
+</fieldset>
+</section>

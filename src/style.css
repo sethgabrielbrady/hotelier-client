@@ -18,11 +18,29 @@ body {
 main {
   color: black; }
 
-.find-reservation .form-group {
+.find-reservation {
+  height: auto;
+  margin-bottom: 2em; }
+  .find-reservation .form-group {
+    display: flex;
+    justify-content: space-between; }
+  .find-reservation input {
+    width: 48%; }
+
+section {
   display: flex;
   justify-content: space-between; }
-.find-reservation input {
-  width: 48%; }
+
+.box {
+  text-align: center;
+  margin: 2em;
+  flex: 48%;
+  border: 2px solid black;
+  height: auto;
+  width: 10em; }
+
+.box:hover {
+  background-color: red; }
 
 .single-reservation {
   color: black;
