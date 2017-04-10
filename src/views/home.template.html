@@ -19,9 +19,10 @@
 
 </form>
 
-
-<section class="box">
-
-
-
-</secton>
+<section ng-controller="UpcomingReservationController as upcomingreservationCtrl">
+<fieldset class="box" ng-repeat='reservation in upcomingreservationCtrl.reservations'>
+    <p>{{reservation.room.number}}</p>
+    <p>{{reservation.room.maxOccupancy}}</p>
+    <p>{{reservation.room.rate}}</p>
+</fieldset>
+</section>

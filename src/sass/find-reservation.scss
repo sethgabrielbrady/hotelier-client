@@ -10,12 +10,24 @@
   input {
       width: 48%;
   }
-
+  margin-bottom: 2em;
 }
 
+section{
+  display: flex;
+  justify-content: space-between;
 
+}
 .box {
-border: 2px solid black;
-height: 4em;
-width: 10em;
+
+  text-align: center;
+  margin: 2em;
+  flex:48%;
+  border: 2px solid black;
+  height: auto;
+  width: 10em;
+}
+
+.box:hover {
+  background-color: red;
 }
