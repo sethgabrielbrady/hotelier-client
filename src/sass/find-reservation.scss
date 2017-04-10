@@ -1,12 +1,21 @@
 
 .find-reservation {
+  height: auto;
+
 
   .form-group {
     display: flex;
     justify-content: space-between;
   }
-
   input {
       width: 48%;
   }
+
+}
+
+
+.box {
+border: 2px solid black;
+height: 4em;
+width: 10em;
 }
