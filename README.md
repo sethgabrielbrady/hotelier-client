@@ -36,7 +36,7 @@ Team Panda
 
 guestId: '58e6c8af633af30011bd0120',  58ea6e9bd41a4600110ab785
 roomId: '58e297c33d5e770011657a85'
- reservation ID (58e6ca83633af30011bd0121), 
+ reservation ID (58e6ca83633af30011bd0121),
 
 ## THINGS THAT NEED TO BE DONE
 
@@ -44,6 +44,5 @@ roomId: '58e297c33d5e770011657a85'
 2. add the serif font
 3. make it responsive
 4. make sure everything has doc blocks
-5. figure out why nothing is happening when you make a reservation
-6. make sure the page goes to a single reservation when one is entered as a guest
-7. figure out why nothing is working
+5. check indentation
+6. populate the All Guests page
