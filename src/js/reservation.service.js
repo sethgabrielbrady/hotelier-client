@@ -25,7 +25,7 @@
             reservation = angular.toJson(reservation);
 
             return $http({
-                    method: 'POST',
+                    method: 'post',
                     url: 'https://panda-hotelier-api.herokuapp.com/api/Reservations',
                     headers: {
                         'Content-Type': 'application/json',
@@ -73,7 +73,35 @@
         }
 
 
+            //
+            // function deleteReservation(guest) {
+            //
+            //     let reservation = {
+            //         checkinDate: guest.checkinDate,
+            //         checkoutDate: guest.checkoutDate,
+            //         numberOfGuests: guest.numberOfGuests,
+            //         guestId: guest.guestId,
+            //         roomId: guest.roomId
+            //     };
+            //
+            //     reservation = angular.toJson(reservation);
+            //
+            //     return $http({
+            //             method: 'delete',
+            //             url: 'https://panda-hotelier-api.herokuapp.com/api/Reservations',
+            //             headers: {
+            //                 'Content-Type': 'application/json',
+            //                 'Authorization': UserService.getToken()
+            //             },
+            //             data: reservation
+            //         })
+            //         .then(function handleResponse(response) {
+            //             return response.data;
+            //         });
+            // }
+
         return {
+            // deleteReservation: deleteReservation,
             getReservations: getReservations,
             createReservation: createReservation,
             getGuestReservation: getGuestReservation

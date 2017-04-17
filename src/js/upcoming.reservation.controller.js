@@ -16,13 +16,29 @@
     function UpcomingReservationController(ReservationService) {
         let vm = this;
         vm.reservations = null;
-        vm.getReservations = ReservationService.getReservations().then(function handleSuccess(data) {
-            
-            vm.reservations = data;
-
-            return data;
+        vm.getReservations = ReservationService.getReservations()
+          .then(function handleSuccess(data){
+              vm.reservations = data;
+              return data;
         });
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
 
 
 

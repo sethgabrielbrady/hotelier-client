@@ -1,9 +1,12 @@
+
+
+
 <h2>All Guests</h2>
-<article class='panel panel-info' ng-repeat='reservation in upcomingreservationCtrl.reservations'>
-    <h3>Guest:{{reservation.guest.fullName}}</h3>
+<article class='panel panel-info' ng-repeat='reservation in upcomingreservationCtrl.reservations |  orderBy:"createdate" :reverse '>
+    <h3>Guest: {{reservation.guest.fullName }}</h3>
     <section class='panel-body'>
-        <p>Guest:{{reservation.guest.email}}</p>
-          <p>Guest:{{reservation.guest.number}}</p>
+        <p>Email: {{reservation.guest.email}}</p>
+        <p>ID: {{reservation.guest.id }}</p>
 
     </section>
 </article>
