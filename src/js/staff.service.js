@@ -10,16 +10,14 @@
         function addGuest(name, email, phone) {
 
             let guests = {
-                id: "",
                 fullName: name,
                 email: email,
-                phone: phone,
+                phone: phone
             };
-            guests = angular.toJson(guests);
 
             return $http({
                     url: 'https://panda-hotelier-api.herokuapp.com/api/Guests',
-                    method: 'POST',
+                    method: 'post',
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': UserService.getToken()
